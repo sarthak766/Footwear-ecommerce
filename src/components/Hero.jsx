@@ -16,7 +16,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 2000); // Change slide every 5 seconds (5000 milliseconds)
+    }, 3000); // Change slide every 3 seconds (5000 milliseconds)
 
     return () => clearInterval(interval);
   }, [currentSlide]); // Run effect whenever currentSlide change
