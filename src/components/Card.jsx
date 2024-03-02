@@ -26,7 +26,7 @@ const Card = ({ id,img, title, star, reviews, prevPrice, newPrice }) => {
             <del>{prevPrice}</del> {newPrice}
           </div>
           <div>
-            <button onClick={handleAddToCart}><BsFillBagFill className="text-gray-600 h-6 w-6" /></button>
+            <button onClick={handleAddToCart} className="text-green-500">Add To Cart <BsFillBagFill className="text-gray-600 h-6 w-6" /></button>
           </div>
         </div>
       </div>
