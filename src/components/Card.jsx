@@ -12,7 +12,7 @@ const Card = ({ id,img, title, star, reviews, prevPrice, newPrice }) => {
        <div className='md:h-[200px] md:w-[450px] overflow-hidden'>
        <img src={img} alt={title} className="w-full h-full p-4" />
        </div>
-      <div className="p-4 md:h-2 ">
+      <div className="p-4 md:h-6 ">
         <h3 className="font-bold text-xl mb-2">{title}</h3>
         <div className="flex items-center mb-2">
           {/* Render star rating */}
@@ -26,7 +26,7 @@ const Card = ({ id,img, title, star, reviews, prevPrice, newPrice }) => {
             <del>{prevPrice}</del> {newPrice}
           </div>
           <div>
-            <button onClick={handleAddToCart} className="text-green-500">Add To Cart <BsFillBagFill className="text-gray-600 h-6 w-6" /></button>
+            <button onClick={handleAddToCart}><BsFillBagFill className="text-green-600 h-6 w-6" /></button>
           </div>
         </div>
       </div>
