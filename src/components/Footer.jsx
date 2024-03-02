@@ -20,14 +20,7 @@ function Footer() {
                         <li><a href="#" className="text-blue-300">Twitter</a></li>
                     </ul>
                 </div>
-                <div className="w-full md:w-1/4">
-                    <h3 className="text-xl font-bold mb-3">Newsletter</h3>
-                    <p>Subscribe to our newsletter to receive exclusive offers, discounts, and updates directly in your inbox.</p>
-                    <form className="mt-4">
-                        <input type="email" placeholder="Your email address" className="bg-gray-800 text-gray-300 rounded py-2 px-4 w-full"/>
-                        <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-2 w-full">Subscribe</button>
-                    </form>
-                </div>
+               
             </div>
             <div className="mt-8 border-t border-gray-800 pt-5">
                 <div className="container mx-auto text-center text-sm">
