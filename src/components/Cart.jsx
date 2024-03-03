@@ -12,10 +12,10 @@ const Cart = () => {
 
   return (
     <>
-        <div className="bg-gray-800 min-h-screen py-8 sm:py-16 md:py-16">
+        <div className="bg-gray-800 min-h-screen py-8 sm:py-18 md:py-16">
       <div className="container mx-auto px-4">
         <div className="mb-8 sm:mb-12 md:mb-1">
-          <Lottie animationData={cart} className="w-full h-[250px]" />
+          <Lottie animationData={cart} className="w-full h-[300px]" />
         </div>
         <div className='flex items-center justify-center'>
         <button onClick={()=>{dispatch(clearCart())}} className=" flex items-center justify-center h-[50px] w-[250px] bg-blue-500 rounded-md font-semibold mb-2 hover:bg-red-500 ">Clear cart  <MdDelete className='text-black text-2xl'/></button>
