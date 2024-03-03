@@ -12,9 +12,9 @@ const Cart = () => {
 
   return (
     <>
-        <div className="bg-gray-800 min-h-screen py-8 sm:py-16 md:py-18">
+        <div className="bg-gray-800 min-h-screen py-8 sm:py-16 md:py-15">
       <div className="container mx-auto px-4">
-        <div className="mb-8 sm:mb-12 md:mb-6">
+        <div className="mb-8 sm:mb-12 md:mb-3">
           <Lottie animationData={cart} className="w-full h-[400px]" />
         </div>
         <div className='flex items-center justify-center'>
