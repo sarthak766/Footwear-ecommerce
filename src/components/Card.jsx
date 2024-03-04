@@ -1,17 +1,23 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { BsFillBagFill } from "react-icons/bs";
 import { addToCart } from '../redux/cartSlice';
+import Alert from './Alert';
 import { useDispatch } from 'react-redux';
 const Card = ({ id,img, title, star, reviews, prevPrice, newPrice }) => {
   const dispatch = useDispatch()
   const handleAddToCart = () => {
     dispatch(addToCart({ id,img, title, newPrice,prevPrice }));
   };
-  const handleAdded =()=>{
-      alert("Item Added to cart Go to cart!! ");
-  }
+  const [showAlert, setShowAlert] = useState(false);
+
+  const handleAdded = () => {
+      setShowAlert(true);
+      setTimeout(() => {
+          setShowAlert(false);
+      }, 1000);
+  };
   return (
-    <div className="max-w-md bg-white shadow-lg rounded-lg overflow-hidden mx-auto my-4 md:w-[25vw] md:h-[50vh] w-[80%] hover:scale-[1.2] transition duration-300 ease-in-out">
+    <div className="max-w-md bg-white shadow-lg rounded-lg overflow-hidden mx-auto my-4 md:w-[30vw] md:h-[40vh] w-[80%] hover:scale-[1.2] transition duration-300 ease-in-out">
        <div className='md:h-[200px] md:w-[450px] overflow-hidden'>
        <img src={img} alt={title} className="w-full h-full p-4" />
        </div>
@@ -24,12 +30,18 @@ const Card = ({ id,img, title, star, reviews, prevPrice, newPrice }) => {
           </section>
           <span className="total-reviews">{reviews}</span>
         </div>
+        
         <div className="flex justify-between items-center">
           <div className="text-xl font-bold text-gray-800">
             <del>{prevPrice}</del> {newPrice}
           </div>
           <div onClick={handleAdded}>
             <button onClick={handleAddToCart}><BsFillBagFill className="text-gray-600 h-6 w-6" /></button>
+            <Alert
+                message="Item Added to cart! Go to cart!!"
+                showAlert={showAlert}
+                onClose={() => setShowAlert(false)}
+            />
           </div>
         </div>
       </div>
