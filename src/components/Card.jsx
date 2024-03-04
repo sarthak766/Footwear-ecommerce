@@ -7,6 +7,9 @@ const Card = ({ id,img, title, star, reviews, prevPrice, newPrice }) => {
   const handleAddToCart = () => {
     dispatch(addToCart({ id,img, title, newPrice,prevPrice }));
   };
+  const handleAdded =()=>{
+      alert("Item Added to cart Go to cart!! ");
+  }
   return (
     <div className="max-w-md bg-white shadow-lg rounded-lg overflow-hidden mx-auto my-4 md:w-[25vw] md:h-[50vh] w-[80%] hover:scale-[1.2] transition duration-300 ease-in-out">
        <div className='md:h-[200px] md:w-[450px] overflow-hidden'>
@@ -25,7 +28,7 @@ const Card = ({ id,img, title, star, reviews, prevPrice, newPrice }) => {
           <div className="text-xl font-bold text-gray-800">
             <del>{prevPrice}</del> {newPrice}
           </div>
-          <div>
+          <div onClick={handleAdded}>
             <button onClick={handleAddToCart}><BsFillBagFill className="text-gray-600 h-6 w-6" /></button>
           </div>
         </div>
