@@ -17,7 +17,7 @@ const Card = ({ id,img, title, star, reviews, prevPrice, newPrice }) => {
       }, 1000);
   };
   return (
-    <div className="max-w-md bg-white shadow-lg rounded-lg overflow-hidden mx-auto my-4 md:w-[30vw] md:h-[40vh] w-[80%] hover:scale-[1.2] transition duration-300 ease-in-out">
+    <div className="max-w-md bg-white shadow-lg rounded-lg overflow-hidden mx-auto my-4 md:w-[25vw] md:h-[50vh] w-[80%] hover:scale-[1.2] transition duration-300 ease-in-out">
        <div className='md:h-[200px] md:w-[450px] overflow-hidden'>
        <img src={img} alt={title} className="w-full h-full p-4" />
        </div>
